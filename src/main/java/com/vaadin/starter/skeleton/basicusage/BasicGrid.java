@@ -30,7 +30,12 @@ public class BasicGrid extends VerticalLayout {
 
 		Grid<Person> grid = new Grid<>(Person.class);
 		grid.setItems(personList);
-
+		
+		//The Grid<>(Person.class) sorts the properties and in order to reorder the properties we use the 'setColumns' method.
+		grid.setColumns("id","firstName","lastName","age","address","phoneNumber","maritalStatus","birthdate");
+		
+		grid.removeColumnByKey("id");		
+		
 		add(grid);
 
 	}
