@@ -18,7 +18,7 @@ import com.vaadin.flow.data.renderer.NumberRenderer;
 import com.vaadin.flow.router.Route;
 import com.vaadin.starter.skeleton.Item;
 
-@Route("o")
+@Route("FormattingContents")
 public class FormattingContents extends VerticalLayout {
 
 	public FormattingContents() {
