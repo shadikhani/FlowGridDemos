@@ -15,7 +15,7 @@ public class MainView extends VerticalLayout {
 	private final Fairy fairy = Fairy.create();
 
 	public MainView() {
-
+//Test
 //		List<Person> personList = new ArrayList<>();
 //		personList.add(new Person(1, "Shadi", "Khani", 1980, new Address("Iran", 1, "2145"), "09122053247"));
 //		personList.add(new Person(2, "Shervin", "Khani", 1981, new Address("Ekbatan", 2, "7721"), "09122053247"));
