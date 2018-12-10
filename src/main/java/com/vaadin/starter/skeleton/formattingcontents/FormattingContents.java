@@ -10,10 +10,8 @@ import java.util.Locale;
 
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.LocalDateRenderer;
 import com.vaadin.flow.data.renderer.LocalDateTimeRenderer;
-import com.vaadin.flow.data.renderer.NativeButtonRenderer;
 import com.vaadin.flow.data.renderer.NumberRenderer;
 import com.vaadin.flow.router.Route;
 import com.vaadin.starter.skeleton.Item;
@@ -54,15 +52,6 @@ public class FormattingContents extends VerticalLayout {
 		grid.addColumn(new LocalDateRenderer<>(Item::getEstimatedDeliveryDate,
 		        DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)))
 		        .setHeader("Estimated delivery date");
-
-		// NativeButtonRenderer for an easy clickable button,
-		// without creating a component
-		grid.addColumn(new NativeButtonRenderer<>("Remove", item -> {
-		    ListDataProvider<Item> dataProvider = (ListDataProvider<Item>) grid
-		            .getDataProvider();
-		    dataProvider.getItems().remove(item);
-		    dataProvider.refreshAll();
-		})).setWidth("100px").setFlexGrow(0);
 
 		add(grid);
 

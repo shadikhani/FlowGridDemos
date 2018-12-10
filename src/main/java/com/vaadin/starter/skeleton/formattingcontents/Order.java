@@ -60,7 +60,7 @@ public class Order {
 	public void setNumberOfOrder(int numberOfOrder) {
 		this.numberOfOrder = numberOfOrder;
 	}
-	
+
 	public Address getAddress() {
 		return address;
 	}
@@ -68,9 +68,7 @@ public class Order {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
-	
-	
+
 	public Order(String name, int numberOfOrder, float price, LocalDateTime purchaseDate,
 			LocalDate estimatedDeliveryDate, String personName, Address address) {
 		super();
@@ -83,26 +81,16 @@ public class Order {
 		this.address = address;
 	}
 
-
 	public static class Address {
-		private String street;
-		private int number;
+		private String city;
 		private String postalCode;
 
-		public String getStreet() {
-			return street;
+		public String getCity() {
+			return city;
 		}
 
-		public void setStreet(String street) {
-			this.street = street;
-		}
-
-		public int getNumber() {
-			return number;
-		}
-
-		public void setNumber(int number) {
-			this.number = number;
+		public void setCity(String city) {
+			this.city = city;
 		}
 
 		public String getPostalCode() {
@@ -115,14 +103,13 @@ public class Order {
 
 		@Override
 		public String toString() {
-			return String.format("%s %s", street, number);
+			return String.format("%s %s", city, postalCode);
 		}
 
-		public Address(String street, int number, String postalCode) {
+		public Address(String postalCode,String city) {
 			super();
-			this.street = street;
-			this.number = number;
 			this.postalCode = postalCode;
+			this.city = city;
 		}
 
 	}
